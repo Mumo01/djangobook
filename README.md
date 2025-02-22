@@ -35,9 +35,16 @@ This is a **Django application** that manages a list of books. It provides a RES
 
 2. Set up the virtual environment and install dependencies:
   ```bash
-  python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+    # On Windows
+    python -m venv venv
+    source venv\Scripts\activate 
+    pip install -r requirements.txt
+  ```
+  ```bash
+    # On MacOs
+    python -m venv venv
+    source venv/bin/activate
+    pip3 install -r requirements.txt 
   ```
 3. Run migrations:
    ```bash
@@ -47,7 +54,7 @@ pip install -r requirements.txt
    ```bash
    python manage.py runserver
    ```
-5. Access the API at [HTTP://127.0.0.](http://127.0.0.1:8000/bookpost/)
+5. Access the API at [http://127.0.0.1:8000/bookpost/](http://127.0.0.1:8000/bookpost/)
 
 ## Code Structure
 **Models**: Defined in models.py with the BookPost model.
@@ -60,4 +67,23 @@ pip install -r requirements.txt
 
 **Tests**: Unit tests for models, views, and validators in tests.py.
 
-## Example Test Run
+### Example Test Run
+## Unit Test Run
+- Find the Unit tests at api/tests.py
+  <br><img src= "https://github.com/user-attachments/assets/bf4c9ed1-bdaf-47e1-be65-ac3415cd9808" height="80%" width="80%" alt=""/><br>
+## API Endpoints Run
+- Get Full List
+   <br><img src= "https://github.com/user-attachments/assets/b86f1610-e5cf-40c2-aadd-f3bcb6e46ac8" height="80%" width="80%" alt=""/><br>
+- POST
+   <br><img src= "https://github.com/user-attachments/assets/3ca88ee0-8c72-4608-9c43-965cc1b70851" height="80%" width="80%" alt=""/><br>
+- DELETE by ID
+   <br><img src= "https://github.com/user-attachments/assets/772531f3-7f39-4f9c-94c2-e17e723f51f4" height="80%" width="80%" alt=""/><br>
+- UPDATE BY id
+   <br><img src= "https://github.com/user-attachments/assets/9d10be2c-4179-4aa0-9bbe-725fc2474db4" height="80%" width="80%" alt=""/><br>
+- SEARCH by title
+   <br><img src= "https://github.com/user-attachments/assets/86f4e6c5-0ea9-4fc5-9304-9508a1af9762" height="80%" width="80%" alt=""/><br>
+- GET by ID
+  <br><img src= "https://github.com/user-attachments/assets/9823e237-2e3b-4716-b0f9-01a5e7eed92b" height="80%" width="80%" alt=""/><br>
+
+
+  
