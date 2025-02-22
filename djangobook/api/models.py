@@ -1,12 +1,12 @@
 from django.db import models
-from .validators import validate_publication_date
+from .validators import validate_publication_date, isbn_validator
 
 # Create your models here.
 class BookPost(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     publication_date = models.DateField(validators=[validate_publication_date]) #Apply validation check
-    isbn = models.CharField(max_length=13, unique=True)
+    isbn = models.CharField(validators=[isbn_validator], max_length=13, unique=True)
     summary = models.TextField(max_length=100)
 
     def __str__(self):
