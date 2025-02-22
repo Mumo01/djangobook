@@ -67,11 +67,12 @@ This is a **Django application** that manages a list of books. It provides a RES
 
 **Tests**: Unit tests for models, views, and validators in tests.py.
 
-### Example Test Run
-## Unit Test Run
+## Example Test Run
+### Unit Test Run
 - Find the Unit tests at api/tests.py
   <br><img src= "https://github.com/user-attachments/assets/bf4c9ed1-bdaf-47e1-be65-ac3415cd9808" height="80%" width="80%" alt=""/><br>
-## API Endpoints Run
+  
+### API Endpoints Run
 - Get Full List
    <br><img src= "https://github.com/user-attachments/assets/b86f1610-e5cf-40c2-aadd-f3bcb6e46ac8" height="80%" width="80%" alt=""/><br>
 - POST
@@ -85,5 +86,21 @@ This is a **Django application** that manages a list of books. It provides a RES
 - GET by ID
   <br><img src= "https://github.com/user-attachments/assets/9823e237-2e3b-4716-b0f9-01a5e7eed92b" height="80%" width="80%" alt=""/><br>
 
+## Key Decisions Made
+### 1. Use of `generics` and `APIView` for Views
+Django REST Framework's `generics` (e.g., `ListCreateAPIView`, `RetrieveUpdateDestroyAPIView`) and `APIView` were used to implement the API endpoints. This reduced the amount of boilerplate code and made the views more maintainable.
 
-  
+### 2. Search Functionality Using `icontains`
+The search functionality uses `icontains` to perform case-insensitive partial matching on the `title` field. This provides a more user-friendly search experience.
+
+### 3. Use of SQLite for Development
+SQLite was used as the default database for development because it is lightweight and requires no additional setup. For production, the database can be switched to PostgreSQL or MySQL.
+
+### 4. Inclusion of Migration Files in Version Control
+Migration files were included in the repository to ensure that anyone cloning the project can set up the database schema without creating new migrations.
+
+### 5. Use of `gettext_lazy` for Translation Support
+The `gettext_lazy` function was used for error messages in validators to support internationalization (i18n).
+
+### 6. Comprehensive Unit Tests
+Unit tests were written to cover models, views, and validators to ensure the application behaves as expected. This improves the reliability of the application and makes it easier to catch bugs during development.
