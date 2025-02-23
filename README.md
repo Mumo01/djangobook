@@ -10,6 +10,7 @@ This is a **Django application** that manages a list of books. It provides a RES
   - `GET /books/{id}/`: Retrieve a specific book by ID.
   - `PUT /books/{id}/`: Update a specific book by ID.
   - `DELETE /books/{id}/`: Delete a specific book by ID.
+  - `SEARCH /books/{id}/`: Search a specific book by ID.
 - **Validation**:
   - Ensures the `isbn` field is unique and valid (10 or 13 digits).
   - Ensures the `publication_date` is in the past.
